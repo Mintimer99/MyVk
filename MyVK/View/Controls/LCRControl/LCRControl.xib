@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LCRConrol" customModule="MyVK" customModuleProvider="target">
+            <connections>
+                <outlet property="commentsButton" destination="7Us-3A-Vkp" id="Dn4-mb-UUo"/>
+                <outlet property="likeButton" destination="XI8-hy-9Q5" id="tXl-RF-I4P"/>
+                <outlet property="repostButton" destination="DgD-dJ-OuC" id="Lew-bf-K7J"/>
+                <outlet property="seenView" destination="in2-g3-l8i" id="jKb-rw-Nfw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K8o-Nu-Tql">
+                    <rect key="frame" x="0.0" y="408.66666666666669" width="235.66666666666666" height="35"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-hy-9Q5" customClass="LikePanelControl" customModule="MyVK" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="35"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Us-3A-Vkp" customClass="CommentsControl" customModule="MyVK" customModuleProvider="target">
+                            <rect key="frame" x="82" y="0.0" width="72" height="35"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DgD-dJ-OuC" customClass="ShareControl" customModule="MyVK" customModuleProvider="target">
+                            <rect key="frame" x="164" y="0.0" width="71.666666666666686" height="35"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="WdV-fV-5J9"/>
+                        <constraint firstItem="XI8-hy-9Q5" firstAttribute="height" secondItem="DgD-dJ-OuC" secondAttribute="height" id="uGJ-Ec-z5z"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="in2-g3-l8i" customClass="SeenControl" customModule="MyVK" customModuleProvider="target">
+                    <rect key="frame" x="335.66666666666669" y="408.66666666666669" width="57.333333333333314" height="35"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="in2-g3-l8i" firstAttribute="leading" secondItem="DgD-dJ-OuC" secondAttribute="trailing" constant="100" id="N6O-DJ-aUi"/>
+                <constraint firstItem="K8o-Nu-Tql" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="SkA-QZ-MX2"/>
+                <constraint firstItem="K8o-Nu-Tql" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lUb-CN-OVa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="in2-g3-l8i" secondAttribute="trailing" id="sJH-K1-fkY"/>
+                <constraint firstItem="in2-g3-l8i" firstAttribute="height" secondItem="K8o-Nu-Tql" secondAttribute="height" id="tVj-HI-h2I"/>
+                <constraint firstItem="K8o-Nu-Tql" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="u3r-As-2MY"/>
+                <constraint firstItem="in2-g3-l8i" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wKh-UT-AWU"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+</document>
